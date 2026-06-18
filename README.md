@@ -142,6 +142,14 @@ bash scripts/run_stage3_validation.sh \
   exp/coffee_table_colocated/nomask_material
 ```
 
+The public checkpoint stages correspond to the main paper pipeline:
+
+```text
+stage1  # geometry initialization
+stage2  # physically based rendering
+stage3  # material optimization
+```
+
 Validation scripts always run from an existing experiment directory:
 
 ```bash
