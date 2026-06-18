@@ -185,16 +185,8 @@ synthetic: bedroom, shelf, kitchen_counter
 real:      coffee_table, window_sill, shoe_rack, table
 ```
 
-Most scene groups include both `natural` and `colocated` train/validation
-cases. The real `table` scene includes `colocated` train/validation cases.
-
-Checkpoint stages:
-
-```text
-stage1  # geometry initialization
-stage2  # physically based rendering
-stage3  # material optimization
-```
+Most scene groups include both `natural` and `colocated` variations. The real
+`table` scene includes only the `colocated` version.
 
 The checkpoint archive is organized by scene and stage:
 
