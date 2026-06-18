@@ -88,10 +88,10 @@ After the container starts, run the evaluation or training commands below from
 
 ### Build The Image Locally
 
-If you want to rebuild the Docker image locally, download the patched
-Mitsuba/Dr.Jit wheel bundle before running `docker build`. The Dockerfile
-installs these wheels directly. The corresponding patched Mitsuba source is
-published at
+If you want to rebuild the Docker image locally, [download](https://dzwmyzdewsbxi.cloudfront.net/projects/glow-project/glow-mitsuba3-patched-wheels.zip)
+the patched Mitsuba/Dr.Jit wheel bundle before running `docker build`. The
+Dockerfile installs these wheels directly. The corresponding patched Mitsuba
+source is published at
 [GLOW-Inverse-Rendering/mitsuba3-myprincipled-fork](https://github.com/GLOW-Inverse-Rendering/mitsuba3-myprincipled-fork).
 
 ```bash
