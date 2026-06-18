@@ -1,0 +1,20 @@
+defaults:
+  - wildlight_base
+  - _self_
+
+
+dataset:
+    class: synthetic
+    ignore_mask: False
+# dataset_val:
+#     class: ${..dataset.class}
+#     data_dir: ./datasets/${.class}/CASE_NAME/
+#     render_cameras_name: cameras_sphere.npz
+#     object_cameras_name: cameras_sphere.npz
+#     apply_gamma: False
+#     use_pcd: 
+train:
+    end_iter: 491000
+    mask_weight: 1.0    
+
+

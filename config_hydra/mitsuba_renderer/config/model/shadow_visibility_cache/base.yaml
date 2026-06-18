@@ -1,0 +1,13 @@
+type: embedding
+config:
+    d_out: 1
+    d_hidden: 256
+    n_layers: 2
+    point_encoding:
+        n_levels: 16
+        n_features_per_level: 2
+        log2_hashmap_size: 18
+        base_resolution: 4
+        per_level_scale: 1.5
+    num_lights: 1000
+    light_features: 512

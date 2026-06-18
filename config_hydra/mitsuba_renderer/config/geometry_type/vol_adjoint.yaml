@@ -1,0 +1,5 @@
+name: vol_adjoint
+options:
+  grad_scale: 0.1
+  top_k: 32
+  repeat_bsdf_sample: 8

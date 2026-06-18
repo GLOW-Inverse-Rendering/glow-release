@@ -1,0 +1,41 @@
+defaults:
+  - view_net: default_principled
+  - _self_
+nerf:
+    D: 8
+    d_in: 4
+    d_in_view: 3
+    W: 256
+    multires: 10
+    multires_view: 4
+    output_ch: 4
+    skips: [4]
+    use_viewdirs: true
+
+sdf_type: "ngp"
+sdf_network:
+    d_out: 266 # 269 for 3-lobe GGX
+    d_in: 3
+    d_hidden: 64
+    n_layers: 2
+    bias: 0.5
+    scale: 1.0
+    ngp_encoding:
+        n_levels: 16
+        n_features_per_level: 2
+        log2_hashmap_size: 19
+        base_resolution: 32
+        per_level_scale: 1.5
+    geometric_init: true
+    weight_norm: false
+    inside_outside: false
+
+variance_network:
+    init_val: 0.3
+
+neus_renderer:
+    n_samples: 64
+    n_importance: 64
+    n_outside: 0
+    up_sample_steps: 4     # 1 for simple coarse-to-fine sampling
+    perturb: 1.0

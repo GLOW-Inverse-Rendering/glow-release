@@ -1,0 +1,6 @@
+spp: 8
+width: 256
+height: 256
+post_init: {}
+enable_scale_mat: ${dataset.enable_scale_mat}
+is_sdf: ${dataset.is_sdf}

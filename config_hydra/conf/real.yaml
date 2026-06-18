@@ -1,0 +1,26 @@
+defaults:
+  - base
+  - _self_
+
+
+dataset:
+    class: real
+    ignore_mask: True
+    use_pcd: True
+# dataset_val:
+#     class: ${..dataset.class}
+#     data_dir: ./datasets/${.class}/CASE_NAME/
+#     render_cameras_name: cameras_sphere.npz
+#     object_cameras_name: cameras_sphere.npz
+#     apply_gamma: False
+#     use_pcd: 
+train:
+    end_iter: 991000
+
+    orient_loss_period: 4
+    mask_weight: 0.0
+
+    num_pcd_pts: 8192
+    # use_shadow_mask: false
+
+

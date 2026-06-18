@@ -1,0 +1,7 @@
+name: vol_bsdf_adjoint
+options:
+  repeat_bsdf_sample: 1
+  grad_scale: 0.1
+  reflectance_grad_scale: 1.0
+  top_k: 128
+  

@@ -1,0 +1,7 @@
+defaults:
+  - rendering_base
+  - _self_
+
+integrator: direct
+config:
+  hide_emitters: true

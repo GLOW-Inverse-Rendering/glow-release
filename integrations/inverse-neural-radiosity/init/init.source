@@ -1,0 +1,12 @@
+# disable core dump
+ulimit -c 0
+
+# make Python work better
+export PYTHONPATH=$(pwd)
+
+# use GPU
+export MI_DEFAULT_VARIANT=cuda_ad_rgb
+export TORCH_DEVICE=cuda:0
+
+# bypass imagemagick bug under CUDA
+export OMP_NUM_THREADS=1

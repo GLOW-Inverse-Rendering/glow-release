@@ -1,0 +1,9 @@
+defaults:
+  - default
+  - _self_
+
+brdf_settings:
+    type: ambient_sep
+    mask_shadowing: joint
+    subsurface: 0
+    dims: 9

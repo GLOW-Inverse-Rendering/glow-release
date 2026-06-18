@@ -1,0 +1,23 @@
+name: principled
+post_init: {}
+texture:
+  base_color:
+    post_init:
+      function: iron_reflectance_net
+      kwargs:
+        # cmd line
+        init_ckpt:
+        type: albedo
+        # automatically set
+        scene_min:
+        scene_max:
+  roughness:
+    post_init:
+      function: iron_reflectance_net
+      kwargs:
+        # cmd line
+        init_ckpt:
+        type: roughness
+        # automatically set
+        scene_min:
+        scene_max:

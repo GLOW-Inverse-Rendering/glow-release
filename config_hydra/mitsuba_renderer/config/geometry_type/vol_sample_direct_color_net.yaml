@@ -1,0 +1,6 @@
+name: vol_sample_direct_color_net
+options:
+  repeat_bsdf_sample: 1
+  grad_scale: 0.0
+  top_k: 1
+  

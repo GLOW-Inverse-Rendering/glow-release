@@ -1,0 +1,6 @@
+name: mesh_bsdf_adjoint
+options:
+  repeat_bsdf_sample: 16
+  grad_scale: 0.1
+  reflectance_grad_scale: 1.0
+  

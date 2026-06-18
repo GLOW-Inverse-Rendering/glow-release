@@ -1,0 +1,23 @@
+name: principled
+post_init: {}
+texture:
+  base_color:
+    post_init:
+      function: reflectance_net_coupled
+      kwargs:
+        width: 256
+        hidden: 4
+        feature_size: 265
+        # automatically set
+        scene_min:
+        scene_max:
+  roughness:
+    post_init:
+      function: reflectance_net_coupled
+      kwargs:
+        width: 256
+        hidden: 4
+        feature_size: 265
+        # automatically set
+        scene_min:
+        scene_max:

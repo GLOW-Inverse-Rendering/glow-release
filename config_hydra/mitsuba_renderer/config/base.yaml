@@ -1,0 +1,53 @@
+defaults:
+  - geometry_type: pts
+  - model: base
+  - _self_
+
+loss:
+  use_radiosity: false
+  rhs_radiosity: false
+  loss_denominator: "both"
+  loss_denominator_val: 0.01
+  radiosity_loss_denominator: "prediction"
+  loss_type: "relative_orient"
+  use_visibility_loss: true
+
+train:
+  adapt_step:
+  mitsuba_start_step:
+  amsgrad: false
+  orient_loss_period_first_half: 2
+  protective_loss_type: "orient"
+
+  reg_weight: 0.1
+  load_integrator_only: false
+  use_secondary_bounce: true
+  secondary_random_light: true
+  restart_freq: 50000
+  subsample_radiosity: null
+  secondary_subsample: null
+  learning_rate: 5e-5
+
+  use_neus_secondary_bounce: true
+
+  
+  
+
+render:
+  no_bsdf_sample: false
+  bsdf_sample_skip_iters: 0
+  use_neus_rhs: true
+  use_neus_material: true
+  use_flashlight: true
+  freeze_flashlight_intensity: true
+  use_separate_emitter_bsdf_cache: true
+  use_field_occlusion_hint: false
+  bsdf: principledmy
+  scale_input: null
+  renderer_type: nerad
+  use_frozen_radiance: true
+  flashlight_type: spot
+  ambient_light: false
+
+  detach_ambient_env_throughput: false
+  detach_ambient_net_throughput: false

@@ -1,0 +1,29 @@
+defaults:
+  - rendering_base
+  - _self_
+
+integrator: nerf
+config:
+  hide_emitters: True
+post_init:
+  function: nerf_net
+  kwargs:
+    n_layers: 8
+    hidden_channels: 256
+    embedding:
+      pos_enc_freq: 10
+      dir_enc_freq: 4
+    config:
+        n_samples: 64
+        n_importance: 128
+        importance_mode: cat
+        white_background: true
+
+        near: 1
+        far: 10
+
+        ray_chunk_size: 512
+
+    # automatically set
+    scene_min:
+    scene_max:

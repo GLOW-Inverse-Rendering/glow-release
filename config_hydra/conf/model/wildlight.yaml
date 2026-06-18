@@ -1,0 +1,7 @@
+defaults:
+  - default
+  - override view_net: wildlight
+  - _self_
+
+sdf_network:
+    d_out: 266 # 269 for 3-lobe GGX

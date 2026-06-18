@@ -1,0 +1,3 @@
+defaults:
+  - shadow_visibility_cache: base
+  - _self_

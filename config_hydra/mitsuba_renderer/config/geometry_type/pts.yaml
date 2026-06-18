@@ -1,0 +1,4 @@
+name: pts
+options:
+  repeat_bsdf_sample: 128
+  grad_scale: 0.1

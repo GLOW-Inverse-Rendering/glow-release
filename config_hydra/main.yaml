@@ -1,0 +1,39 @@
+defaults:
+  - conf: real
+  - _self_
+  - mitsuba_renderer: null
+  
+
+hydra:
+  run:
+    dir: ./exp/${case}/${eval:'"nomask_${exp_suffix}" if "${exp_suffix}" is not None else "nomask" '}
+mode: train
+mcube_threshold: 0.0
+is_continue: false
+gpu: 0
+case: ""
+disable_bake_texture: false
+exp_suffix: null
+distill_suffix: null
+distill_conf: null
+disable_scaler: true
+debug_error: false
+set_s: null
+is_world: false
+mitsuba_renderer: 
+latest_model_name:
+
+# mitsuba_renderer:
+#   scene_path:
+#   mesh_path:
+#   out_dir:
+#   material_network:
+#     d_feature: 256
+#     mode: no_view_dir_no_normal
+#     d_in: 3
+#     d_out: 3
+#     d_hidden: 256
+#     n_layers: 2
+#     weight_norm: True
+#     multires_view: 4
+#     squeeze_out: True

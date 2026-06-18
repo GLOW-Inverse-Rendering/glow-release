@@ -1,0 +1,10 @@
+defaults:
+  - base
+  - _self_
+loss:
+  use_radiosity: false
+render:
+  no_bsdf_sample: true
+geometry_type:
+  options:
+    repeat_bsdf_sample: 1

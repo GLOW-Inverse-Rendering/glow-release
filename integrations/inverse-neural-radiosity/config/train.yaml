@@ -1,0 +1,102 @@
+defaults:
+  - rendering: nerad
+  - recons_loss: l2_relative_gt
+  - residual_loss: l2_relative_prediction
+  - LHS_recons_loss: l2_relative_prediction
+  - bsdf: diffuse
+  - validation: [albedo, image]
+  - saving: [latest]
+  - envmap: gt
+  - _self_
+  - regularization: none
+
+name: train
+out_root: /output/nerad/experiments
+out_dir: ${now:%Y-%m-%d}-${now:%H-%M-%S}-${name}
+
+hydra:
+  run:
+    dir: ${out_root}/${out_dir}
+
+
+resume: true
+validation_view: 0
+radiance_cache:
+
+
+dataset:
+  scene: ???
+  cameras: ???
+  n_views: -1
+  skip_imgs: []
+  albedo:
+  roughness:
+  collocated_flashlight: false
+  flashlight_energy:
+  flashlight_type: 'flashlight'
+  is_exr: true
+  is_real: false # real camera will over expose
+  is_sdf: false
+  scale: 0.00001
+  trans_x: -1000.0
+  trans_y: -1000.0
+  trans_z: -1000.0
+  sdf_ckpt:
+  sdf_cameras:
+  enable_scale_mat: false
+  custom_mesh:
+
+
+batch_size: 256
+learning_rate: 0.001
+# accum_grad: 1
+accum_grad_n_batches_for_geo: 1
+
+lr_decay_start: -1
+lr_decay_rate: 0.1
+lr_decay_steps: 1000
+lr_decay_min_rate: 0.01
+
+n_steps: 600
+shuffle: true
+freeze_geometry_n_steps: 0
+learn_envmap: false
+learn_flashlight_intensity: false
+learn_flashlight_global_offset: false
+freeze_flashlight_intensity: false
+
+load_integrator_only: false
+# pytorch Adam default
+beta_1: 0.9
+beta_2: 0.999
+amsgrad: false
+
+compute:
+  seed: 999
+  torch_detect_anomaly: false
+  dr_optimization_flags: false
+
+check_gradients: false
+profile_vram: false
+profile_time: false
+profile_time_sync_cuda: true
+profile_counter: false
+update_loss_step_size: 1
+
+is_watchdog_init: false
+abort_step_size: 0
+disable_optimizer_step: false
+avoid_empty_batches: false
+use_regular_interval_batches: true
+redistancing_interval: 100
+optimize_geometry: false
+
+
+multi_scale:
+multi_scale_iters:
+
+no_adjoint_pass: false
+freeze_light_n_steps:
+
+# regularization: false # simple boolean for now
+random_crop: true

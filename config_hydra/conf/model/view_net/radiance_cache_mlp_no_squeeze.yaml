@@ -1,0 +1,6 @@
+defaults:
+  - radiance_cache_mlp
+  - _self_
+
+radiance_cache_network:
+  squeeze_out: false

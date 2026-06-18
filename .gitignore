@@ -1,0 +1,48 @@
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# OS/editor files
+.DS_Store
+._*
+*~
+\#*\#
+
+# Local environments and large local tools
+/.venv/
+/venv/
+/env/
+blender-*-linux-x64/
+*.sif
+
+# Experiment outputs and release-test artifacts.
+# Keep these on disk for review, but do not put them in release git history.
+/exp/
+/official_test_runs/
+/lightning_logs/
+/submitfiles/
+/exp_iron_stage2/
+/exp_direct/
+/exp_mitsuba_stage2/
+/eccv_exp/
+
+# Data is released separately from this code repository.
+/datasets/
+/integrations/inverse-neural-radiosity/data/
+
+# Ad-hoc debug/export outputs
+/debug_out/
+/debug_render*/
+/mitsuba_dump/
+/gani_data.pkl
+/test.ply
+/debug_alloc.pickle
+
+# Mitsuba utilities generate these beside source scene XMLs during runs.
+*.modified.xml
+*.modified_roughness.xml

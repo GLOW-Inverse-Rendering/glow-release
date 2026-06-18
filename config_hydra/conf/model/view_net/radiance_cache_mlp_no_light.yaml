@@ -1,0 +1,16 @@
+view_net_type: "radiance_cache_mlp"
+radiance_cache_network:
+  d_feature: 0
+  mode: "idr"
+  d_in: 9
+  d_out: 3
+  d_hidden: 256
+  n_layers: 8
+  weight_norm: False
+  multires: 12
+  multires_view: 12
+  multires_light: 0
+  multires_normal: 12
+  light_features: 0
+  squeeze_out: True
+  skip_in: [4]

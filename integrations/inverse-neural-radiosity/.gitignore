@@ -1,0 +1,22 @@
+__pycache__/
+scripts
+scripts_nerad_only
+data
+output
+notebooks
+.ipynb_checkpoints
+nohup.out
+debug
+
+# macos
+.DS_Store
+._*
+
+# emacs
+\#*\#
+*~
+.\#*
+# garbage
+debug_
+
+submitfiles

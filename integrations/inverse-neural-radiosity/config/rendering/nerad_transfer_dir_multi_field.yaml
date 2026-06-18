@@ -1,0 +1,24 @@
+defaults:
+  - nerad_base
+  - pos_emb: hash_grid
+  - dir_emb: spherical_harmonics
+  - pl_pos_emb: hash_grid
+  - _self_
+
+post_init:
+  # override in child config
+  function: transfer_net_dir_multi_field
+  kwargs:
+    width: 256
+    hidden: 2
+    position1_embedding: ${rendering.pos_emb}
+    direction_embedding: ${rendering.dir_emb}
+    position2_embedding: ${rendering.pl_pos_emb}
+    direction2_embedding: ${rendering.dir_emb}
+    # automatically set
+    scene_min:
+    scene_max:
+    num_fields: 2
+
+  # auto set
+  residual_function:

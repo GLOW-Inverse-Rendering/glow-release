@@ -1,0 +1,71 @@
+defaults:
+  - _self_
+  - model: default
+
+general:
+#   base_exp_dir: ./exp/CASE_NAME/nomask
+  recording:
+    - ./
+    - ./models
+dataset:
+    class: ???
+    data_dir: ./datasets/${.class}/CASE_NAME/
+    render_cameras_name: cameras_sphere.npz
+    object_cameras_name: cameras_sphere.npz
+    ignore_mask: ???
+    apply_gamma: False
+    use_pcd: ???
+    limit_size:
+    override_case: null
+    use_0_5_convention: false
+    
+# dataset_val:
+#     class: ${..dataset.class}
+#     data_dir: ./datasets/${.class}/CASE_NAME/
+#     render_cameras_name: cameras_sphere.npz
+#     object_cameras_name: cameras_sphere.npz
+#     apply_gamma: False
+#     use_pcd: 
+train:
+    optimize_geo: true
+    amsgrad: false
+    accum_grad: 1
+    freeze_s: false
+    learning_rate: 5e-4
+    learning_rate_flash: 5e-3
+    learning_rate_alpha: 0.05
+    end_iter: ???
+
+    batch_size: 512
+    validate_resolution_level: 4
+    warm_up_end: 5000
+    lr_begin_iter: 0
+
+    anneal_end: 0
+    use_white_bkgd: False
+
+    save_freq: 10000
+    save_freq_latest: 2500
+    val_freq: 5000
+    val_mesh_freq: 5000
+    report_freq: 100
+
+    rgb_loss_type: orient_l2_log_lin
+    orient_loss_period: ???
+    color_weight: 1.0
+    igr_weight: 0.1
+    mask_weight: ???
+    dssim_weight: 0.0
+    dssim_window_size: 11
+
+    samples_per_pixel: 1
+    ncc_weight: 0
+    pts_radiance_weight: 0
+    num_pcd_pts: ???
+    hess_error_weight: 0
+
+    sdf_clip_grad_norm: null
+    use_shadow_mask: false
+    migrate_ckpt: false
+
+    prune_outside_cam: true

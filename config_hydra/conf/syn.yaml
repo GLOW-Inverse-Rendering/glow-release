@@ -1,0 +1,20 @@
+defaults:
+  - base
+  - _self_
+
+
+dataset:
+    class: synthetic
+    ignore_mask: False
+    use_pcd: False
+dataset_val: ${.dataset}
+train:
+    end_iter: 491000
+
+    orient_loss_period: 4
+    mask_weight: 1.0
+
+    num_pcd_pts: 0
+    
+
+

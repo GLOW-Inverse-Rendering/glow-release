@@ -1,0 +1,4 @@
+type: bilateral_sem
+weight: 0.005
+albedo_sigma: 0.3
+pos_sigma: 1.0

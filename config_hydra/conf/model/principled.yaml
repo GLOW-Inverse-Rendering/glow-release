@@ -1,0 +1,6 @@
+defaults:
+  - default
+  - override view_net: default_principled
+  - _self_
+sdf_network:
+    d_out: 266 # 1 sdf + 256 feature + 9 parameters

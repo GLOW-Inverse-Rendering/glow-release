@@ -1,0 +1,13 @@
+defaults:
+  - base
+  - _self_
+  - override model: wildlight
+
+dataset:
+    apply_gamma: False
+    use_pcd: False
+train:
+    rgb_loss_type: l1
+    orient_loss_period: 0
+    num_pcd_pts: 0
+
